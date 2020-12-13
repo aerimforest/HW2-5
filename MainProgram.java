@@ -28,7 +28,7 @@ public class MainProgram {
             System.out.println("No. It is the professor ID.\n");
         else if(studentID==1810666) hw_1810666();
 	    else if (studentID == 1810815) hw_1810815();
-        else if (studenID == 1810348) hw_1810348();
+        else if (studentID == 1810348) hw_1810348();
         else
             System.out.println("To be developed...\n");
     }
