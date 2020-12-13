@@ -193,6 +193,7 @@ public class MainProgram {
 		
 		
 		System.out.println("Result: " + result);
+        System.out.println();
 	}
 	
 	public int factorial_1810348(int n) {
