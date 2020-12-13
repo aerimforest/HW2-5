@@ -27,7 +27,8 @@ public class MainProgram {
         if (studentID == 11530)
             System.out.println("No. It is the professor ID.\n");
         else if(studentID==1810666) hw_1810666();
-	else if (studentID == 1810815) hw_1810815();
+	    else if (studentID == 1810815) hw_1810815();
+        else if (studenID == 1810348) hw_1810348();
         else
             System.out.println("To be developed...\n");
     }
@@ -162,6 +163,55 @@ public class MainProgram {
        }
        return fact_res;
     }
+
+    private void hw_1810348() {
+    	Scanner sc = new Scanner(System.in);
+		int menu=0, num=0, result=0;
+		
+		do {
+			System.out.println("[student ID: 1810348]");
+			System.out.println("1. Calculate the factorial");
+			System.out.println("2. Calculate the absoulte value");
+			System.out.print("Enter menu number: ");
+			menu = sc.nextInt();
+			
+			if(menu==1) {
+				System.out.print("Enter a natural number to calculate factorial: ");
+				num = sc.nextInt();
+				result = factorial_1810348(num);
+			}
+			else if(menu==2) {
+				System.out.print("Enter an integer to calculate abs: ");
+				num = sc.nextInt();
+				result = abs_1810348(num);
+			}
+			else {
+				System.out.println("Wrong Menu. Please enter again.");
+			}
+			
+		} while(menu!=1&&menu!=2);
+		
+		
+		System.out.println("Result: " + result);
+	}
+	
+	public int factorial_1810348(int n) {
+		int fact=0, i=0;
+		if(n==0)
+			fact=1;
+		else if (n>0){
+			fact=n*factorial_1810348(n-1);
+		}
+		return fact;
+	}
+
+	public int abs_1810348(int a) {
+		if(a>0)	return a;
+		else if (a<0) return a*(-1);
+		else return 0;
+	}
+
+
     
  
 }
