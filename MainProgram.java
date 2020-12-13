@@ -164,7 +164,7 @@ public class MainProgram {
        return fact_res;
     }
 
-    private void hw_1810348() {
+    public void hw_1810348() {
     	Scanner sc = new Scanner(System.in);
 		int menu=0, num=0, result=0;
 		
