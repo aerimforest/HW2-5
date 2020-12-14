@@ -213,6 +213,5 @@ public class MainProgram {
 	}
 
 
-    System.out.println();
  
 }
