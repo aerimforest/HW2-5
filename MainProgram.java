@@ -29,6 +29,7 @@ public class MainProgram {
         else if(studentID==1810666) hw_1810666();
 	    else if (studentID == 1810815) hw_1810815();
         else if (studentID == 1810348) hw_1810348();
+        else if (studentID == 1810448) hw_1810448();
         else
             System.out.println("To be developed...\n");
     }
@@ -212,6 +213,58 @@ public class MainProgram {
 		else return 0;
 	}
 
+    public void hw_1810448() {
+		int menu, num, result = 0;
+		
+		System.out.println("[Student ID: 1810448]");
+		System.out.println("1. Calculate Factorial");
+		System.out.println("2. Calculate Absolute");
+		
+		while(true) {
+			try {
+				Scanner scan = new Scanner(System.in);
+				System.out.print("Enter menu number: ");
+				menu = scan.nextInt();
 
- 
+				// Factorial
+				if(menu == 1) {
+					System.out.print("Enter a positive integer: ");
+					num = scan.nextInt();
+					if(num < 0) throw new Exception(); // Exceptions when input is negative integer
+					else result = factorial_1810448(num);	
+				}
+				
+				// Absolute
+				else if(menu == 2) {
+					System.out.print("Enter an integer: ");
+					num = scan.nextInt();
+					result = abs_1810448(num);
+				}
+				break;
+
+			} catch (Exception e) {
+				System.out.println("Please enter an integer");
+				continue;
+			}
+		}
+
+		System.out.println(result);
+		System.out.println();
+	}
+	
+	public int factorial_1810448(int num) {
+		if(num == 0) return 1; // 0! = 1
+
+		int result = num;
+		for(int i = num-1 ; i > 1 ; i--) {
+			result *= i;
+		}
+		return result;
+	}
+
+	public int abs_1810448(int num) {
+		int result = num;
+		if(num < 0) result *= (-1);
+		return result;
+	}
 }
